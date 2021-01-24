@@ -3,13 +3,6 @@ h1 {
     color: white;
 }
 
-.heading {
-    margin-top: 1rem;
-    margin-bottom: 6px;
-    color: white;
-    font-size: 1.5rem;
-}
-
 .add-todo {
     text-align: center;
 }
@@ -25,7 +18,7 @@ h1 {
 
 .add:focus {
     outline: none;
-    box-shadow:1px 1px 16px white;
+    box-shadow: 1px 1px 16px white;
 }
 
 .btn {
@@ -33,35 +26,6 @@ h1 {
     background: #E02CF5;
     color: white;
     font-weight: bold;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    min-height: 87vh;
-}
-
-.col {
-    text-align: center;
-    padding: 0 0.5rem;
-    margin: 0 auto;
-}
-
-.col:last-child {
-    border: none !important;
-}
-
-@media all and (max-width: 690px) {
-
-    .col {
-        border-top: 1px solid #E9EAE7;
-    }
-
-    .col:first-child {
-        border-top: none;
-    }
-
 }
 
 @media all and (max-width: 300px) {

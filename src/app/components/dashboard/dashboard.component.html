@@ -3,30 +3,6 @@
     <input class="add" placeholder="Add todo" type="text" name="title" ngModel required>
     <input class="add" placeholder="Add Category" type="text" name="category" ngModel>
     <button class="add btn" (click)="add(form.value)" [disabled]="!form.valid">Add</button>
+    <input class="add" placeholder="Search" type="text" #Search (keyup)="''">
 </form>
-<div class="row">
-    <div class="col">
-        <h3 class="heading">Pending</h3>
-        <div class="area" *ngFor="let todo of pending">
-            <app-to-do-card [todo]="todo" (action)="move(todo,$event)"></app-to-do-card>
-        </div>
-    </div>
-    <div class="col">
-        <h3 class="heading">In-progress</h3>
-        <div class="area" *ngFor="let todo of inProgress">
-            <app-to-do-card [todo]="todo" (action)="move(todo,$event)"></app-to-do-card>
-        </div>
-    </div>
-    <div class="col">
-        <h3 class="heading">Completed</h3>
-        <div class="area" *ngFor="let todo of completed">
-            <app-to-do-card [todo]="todo" (action)="move(todo,$event)"></app-to-do-card>
-        </div>
-    </div>
-    <div class="col">
-        <h3 class="heading">Abandon</h3>
-        <div class="area" *ngFor="let todo of abandon">
-            <app-to-do-card [todo]="todo" (action)="move(todo,$event)"></app-to-do-card>
-        </div>
-    </div>
-</div>
+<app-todo-list [add]="newToDo" [search]="Search.value"></app-todo-list>

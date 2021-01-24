@@ -3,27 +3,27 @@ import { ToDo } from '../model/todo';
 
 const data: ToDo[] = [
   {
-    title: 'Pending',
+    title: 'Buy Grocery',
     category: 'Shopping',
     status: Status.pending,
     id: 1,
   },
   { title: '2 pending', category: 'Workout', status: Status.pending, id: 2 },
   {
-    title: 'In progress',
-    category: 'Shopping',
+    title: 'Electricity bill',
+    category: 'Bills',
     status: Status.inprogress,
     id: 3,
   },
   {
-    title: 'Completed',
-    category: 'Shopping',
+    title: 'Gas bill',
+    category: 'Bills',
     status: Status.completed,
     id: 4,
   },
   {
-    title: 'Abandon',
-    category: 'Shopping',
+    title: 'Swimming',
+    category: 'Workout',
     status: Status.abandon,
     id: 5,
   },
