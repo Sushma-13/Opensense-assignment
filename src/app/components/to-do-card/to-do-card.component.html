@@ -1,0 +1,20 @@
+<div class="card" *ngIf="todo">
+    <div class="cover header">
+        <div style="color: #A2A2A2;">
+            Category :
+        </div>
+        <div style="color: #E37325;">
+            {{todo.category}}
+        </div>
+    </div>
+    <div class="title">{{todo.title}}</div>
+    <div class="cover footer">
+        <div style="color: #A2A2A2;">
+            Action :
+        </div>
+        <div class="status pending" *ngIf="todo.status!=='Pending'" (click)="move('Pending')">Pending</div>
+        <div class="status inprogress" *ngIf="todo.status!=='In-progress'" (click)="move('In-progress')">In-progress</div>
+        <div class="status completed" *ngIf="todo.status!=='Completed'" (click)="move('Completed')">Completed</div>
+        <div class="status abandon" *ngIf="todo.status!=='Abandon'" (click)="move('Abandon')">Abandon</div>
+    </div>
+</div>
